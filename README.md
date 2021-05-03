@@ -11,13 +11,13 @@ Trigger a DAG in Cloud Composer when an object is uploaded to a Google Cloud Sto
 ### Cloud Function
 Configure the following environment variables
 
-| Key          | Value                        |
-| ------------ | ---------------------------- |
-| WEBSERVER_ID | <tenant-project-id>          |
-| DAG_NAME     | <dag-to-trigger>             |
-| CLIENT_ID    | <client-id-of-the-IAM-proxy> |
+| Key          | Value                          |
+| ------------ | ------------------------------ |
+| WEBSERVER_ID | \<tenant-project-id\>          |
+| DAG_NAME     | \<dag-to-trigger\>             |
+| CLIENT_ID    | \<client-id-of-the-IAM-proxy\> |
 
-The tenant project ID can be found in the Airflow Webserver URL in the form <tenant-project-id>.appspot.com
+The tenant project ID can be found in the Airflow Webserver URL in the form \<tenant-project-id\>.appspot.com
 
 The Client ID of the IAM proxy can be found in the IAP URL after clicking on the Airflow Webserver link in the Composer console.
 
