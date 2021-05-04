@@ -48,9 +48,9 @@ public class TriggerDag implements BackgroundFunction<GcsEvent> {
 
   @Override
   public void accept(GcsEvent gcsEvent, Context context) {
-    Preconditions.checkNotNull(WEBSERVER_ID, "WEBSERVER_ID cannot be null");
-    Preconditions.checkNotNull(DAG_NAME, "DAG_NAME cannot be null");
-    Preconditions.checkNotNull(CLIENT_ID, "CLIENT_ID cannot be null");
+    Preconditions.checkNotNull(WEBSERVER_ID, "WEBSERVER_ID environment variable is not set");
+    Preconditions.checkNotNull(DAG_NAME, "DAG_NAME environment variable is not set");
+    Preconditions.checkNotNull(CLIENT_ID, "CLIENT_ID environment variable is not set");
 
     BodyPublisher requestBody = getBody(gcsEvent.getBucket(), gcsEvent.getName());
 
@@ -58,7 +58,7 @@ public class TriggerDag implements BackgroundFunction<GcsEvent> {
   }
   
   /**
-   * Builds the body for the POST request to trigger Cloud Composer.
+   * Builds the body for the POST request.
    *
    * @param bucketName GCS bucket name to pass to the Composer DAG
    * @param filePath GCS file path to pass to the Composer DAG

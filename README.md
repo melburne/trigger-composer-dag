@@ -9,7 +9,7 @@ Trigger a DAG in Cloud Composer when an object is uploaded to a Google Cloud Sto
 ## Setup
 
 ### Cloud Function
-- Set the `Trigger` to Cloud Storage and the `Event Type` to `Finalize/Create`
+- Set the _Trigger_ to `Cloud Storage` and the _Event Type_ to `Finalize/Create`
 
 - Use the Compute Engine Default Service Account or create a new Service Account that has the `Composer User` role.
 
